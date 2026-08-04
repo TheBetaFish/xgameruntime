@@ -1,5 +1,6 @@
 MODULE    = xgameruntime.dll
 EXTRAINCL = -I$(srcdir)/include
+IMPORTS   = combase
 
 SOURCES = \
 	include/xaccessibility.idl \
@@ -39,5 +40,6 @@ SOURCES = \
 	xpersistentlocalstorage.c \
 	xstore.c \
 	xsystem.c \
+	xsystemanalytics.c \
 	xthreading.c \
 	xuser.c

@@ -20,8 +20,18 @@
 
 #define COBJMACROS
 
+#include <roapi.h>
 #include <wine/debug.h>
+#include <winstring.h>
 #include <xgameruntime.h>
+
+#define WIDL_using_Windows_Foundation
+#define WIDL_using_Windows_Foundation_Collections
+#include <windows.foundation.h>
+#define WIDL_using_Windows_Globalization
+#include <windows.globalization.h>
+#define WIDL_using_Windows_System_Profile
+#include <windows.system.profile.h>
 
 extern IXAccessibilityImpl *x_accessibility_impl;
 extern IXAppCaptureImpl *x_app_capture_impl;
@@ -42,6 +52,7 @@ extern IXPackageImpl *x_package_impl;
 extern IXPersistentLocalStorageImpl *x_persistent_local_storage_impl;
 extern IXStoreImpl *x_store_impl;
 extern IXSystemImpl *x_system_impl;
+extern IXSystemAnalyticsImpl *x_system_analytics_impl;
 extern IXThreadingImpl *x_threading_impl;
 extern IXUserImpl *x_user_impl;
 extern IXUserDeviceImpl *x_user_device_impl;
