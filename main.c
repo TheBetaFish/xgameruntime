@@ -54,6 +54,10 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXAccessibilityImpl_QueryInterface( x_accessibility_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
         return IXThreadingImpl_QueryInterface( x_threading_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XUserImpl ))
+        return IXUserImpl_QueryInterface( x_user_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XUserDeviceImpl ))
+        return IXUserDeviceImpl_QueryInterface( x_user_device_impl, iid, out );
 
     return HRESULT_FROM_WIN32( ERROR_NOT_SUPPORTED );
 }

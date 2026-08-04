@@ -25,5 +25,7 @@
 
 extern IXAccessibilityImpl *x_accessibility_impl;
 extern IXThreadingImpl *x_threading_impl;
+extern IXUserImpl *x_user_impl;
+extern IXUserDeviceImpl *x_user_device_impl;
 
 HRESULT WINAPI QueryApiImpl( const GUID *classId, REFIID interfaceId, void **out );

@@ -23,6 +23,8 @@
 #include <include/xaccessibility.h>
 #include <include/xasync.h>
 #include <include/xasyncprovider.h>
+#include <include/xgameerr.h>
 #include <include/xgameruntimetypes.h>
 #include <include/xspeechsynthesizer.h>
 #include <include/xtaskqueue.h>
+#include <include/xuser.h>
