@@ -13,6 +13,7 @@ SOURCES = \
 	include/xgameinvite.idl \
 	include/xgameprotocol.idl \
 	include/xgameruntimefeature.idl \
+	include/xgamesave.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -25,5 +26,6 @@ SOURCES = \
 	xgameinvite.c \
 	xgameprotocol.c \
 	xgameruntimefeature.c \
+	xgamesave.c \
 	xthreading.c \
 	xuser.c
