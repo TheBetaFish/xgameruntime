@@ -21,6 +21,7 @@
 #define GAMING_SERVICES_VERSION 7822L
 
 #include <include/xaccessibility.h>
+#include <include/xappcapture.h>
 #include <include/xasync.h>
 #include <include/xasyncprovider.h>
 #include <include/xgameerr.h>
