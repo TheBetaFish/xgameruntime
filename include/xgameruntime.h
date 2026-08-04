@@ -26,6 +26,7 @@
 #include <include/xasyncprovider.h>
 #include <include/xdisplay.h>
 #include <include/xerror.h>
+#include <include/xgame.h>
 #include <include/xgameerr.h>
 #include <include/xgameruntimetypes.h>
 #include <include/xspeechsynthesizer.h>

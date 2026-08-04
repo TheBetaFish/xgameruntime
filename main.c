@@ -60,6 +60,8 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXDisplayImpl_QueryInterface( x_display_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XErrorImpl ))
         return IXErrorImpl_QueryInterface( x_error_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XGameImpl ))
+        return IXGameImpl_QueryInterface( x_game_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XLauncherImpl ))
         return IXLauncherImpl_QueryInterface( x_launcher_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
