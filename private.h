@@ -32,6 +32,7 @@ extern IXGameImpl *x_game_impl;
 extern IXGameActivationImpl *x_game_activation_impl;
 extern IXGameEventImpl *x_game_event_impl;
 extern IXGameInviteImpl *x_game_invite_impl;
+extern IXGameProtocolImpl *x_game_protocol_impl;
 extern IXLauncherImpl *x_launcher_impl;
 extern IXThreadingImpl *x_threading_impl;
 extern IXUserImpl *x_user_impl;

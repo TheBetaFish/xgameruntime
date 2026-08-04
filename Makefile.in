@@ -11,6 +11,7 @@ SOURCES = \
 	include/xgameactivation.idl \
 	include/xgameevent.idl \
 	include/xgameinvite.idl \
+	include/xgameprotocol.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -21,5 +22,6 @@ SOURCES = \
 	xgameactivation.c \
 	xgameevent.c \
 	xgameinvite.c \
+	xgameprotocol.c \
 	xthreading.c \
 	xuser.c
