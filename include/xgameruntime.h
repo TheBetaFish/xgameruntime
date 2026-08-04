@@ -37,6 +37,7 @@
 #include <include/xgamesave.h>
 #include <include/xgamestreaming.h>
 #include <include/xgameui.h>
+#include <include/xnetworking.h>
 #include <include/xpackage.h>
 #include <include/xpersistentlocalstorage.h>
 #include <include/xspeechsynthesizer.h>

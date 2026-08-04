@@ -48,6 +48,7 @@ extern IXGameSaveImpl *x_game_save_impl;
 extern IXGameStreamingImpl *x_game_streaming_impl;
 extern IXGameUiImpl *x_game_ui_impl;
 extern IXLauncherImpl *x_launcher_impl;
+extern IXNetworkingImpl *x_networking_impl;
 extern IXPackageImpl *x_package_impl;
 extern IXPersistentLocalStorageImpl *x_persistent_local_storage_impl;
 extern IXStoreImpl *x_store_impl;

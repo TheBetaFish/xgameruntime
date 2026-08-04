@@ -17,6 +17,7 @@ SOURCES = \
 	include/xgamesave.idl \
 	include/xgamestreaming.idl \
 	include/xgameui.idl \
+	include/xnetworking.idl \
 	include/xpackage.idl \
 	include/xpersistentlocalstorage.idl \
 	include/xstore.idl \
@@ -36,6 +37,7 @@ SOURCES = \
 	xgamesave.c \
 	xgamestreaming.c \
 	xgameui.c \
+	xnetworking.c \
 	xpackage.c \
 	xpersistentlocalstorage.c \
 	xstore.c \

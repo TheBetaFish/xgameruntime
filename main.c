@@ -80,6 +80,8 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXGameUiImpl_QueryInterface( x_game_ui_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XLauncherImpl ))
         return IXLauncherImpl_QueryInterface( x_launcher_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XNetworkingImpl ))
+        return IXNetworkingImpl_QueryInterface( x_networking_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XPackageImpl ))
         return IXPackageImpl_QueryInterface( x_package_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XPersistentLocalStorageImpl ))
