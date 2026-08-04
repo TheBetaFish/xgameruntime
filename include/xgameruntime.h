@@ -40,5 +40,6 @@
 #include <include/xpackage.h>
 #include <include/xpersistentlocalstorage.h>
 #include <include/xspeechsynthesizer.h>
+#include <include/xstore.h>
 #include <include/xtaskqueue.h>
 #include <include/xuser.h>

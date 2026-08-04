@@ -18,6 +18,7 @@ SOURCES = \
 	include/xgameui.idl \
 	include/xpackage.idl \
 	include/xpersistentlocalstorage.idl \
+	include/xstore.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -35,5 +36,6 @@ SOURCES = \
 	xgameui.c \
 	xpackage.c \
 	xpersistentlocalstorage.c \
+	xstore.c \
 	xthreading.c \
 	xuser.c
