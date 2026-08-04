@@ -1,7 +1,5 @@
 /*
- * Xbox Game runtime Library
- *
- * Copyright 2026 Olivia Ryan
+ * Copyright (C) the Wine project
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,22 +16,29 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-#define COBJMACROS
+#pragma makedep header
 
-#include <wine/debug.h>
-#include <xgameruntime.h>
+import "unknwn.idl";
+import "xuser.idl";
 
-extern IXAccessibilityImpl *x_accessibility_impl;
-extern IXAppCaptureImpl *x_app_capture_impl;
-extern IXAppCaptureMetadataImpl *x_app_capture_metadata_impl;
-extern IXDisplayImpl *x_display_impl;
-extern IXErrorImpl *x_error_impl;
-extern IXGameImpl *x_game_impl;
-extern IXGameActivationImpl *x_game_activation_impl;
-extern IXGameEventImpl *x_game_event_impl;
-extern IXLauncherImpl *x_launcher_impl;
-extern IXThreadingImpl *x_threading_impl;
-extern IXUserImpl *x_user_impl;
-extern IXUserDeviceImpl *x_user_device_impl;
+cpp_quote("#ifdef __WINESRC__")
 
-HRESULT WINAPI QueryApiImpl( const GUID *classId, REFIID interfaceId, void **out );
+[
+    local,
+    object,
+    uuid(bbfbdcc7-bfe7-409b-a5ca-edf054960b4d)
+]
+interface IXGameEventImpl : IUnknown
+{
+    HRESULT XGameEventWrite( [in] XUserHandle user, [in, string] const char *serviceConfigId, [in, string] const char *playSessionId, [in, string] const char *eventName, [in, optional, string] const char *dimensionsJson, [in, optional, string] const char *measurementsJson );
+}
+
+[
+    uuid(bbfbdcc7-bfe7-409b-a5ca-edf054960b4d)
+]
+coclass XGameEventImpl
+{
+    [default] interface IXGameEventImpl;
+}
+
+cpp_quote("#endif")

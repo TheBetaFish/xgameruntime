@@ -9,6 +9,7 @@ SOURCES = \
 	include/xerror.idl \
 	include/xgame.idl \
 	include/xgameactivation.idl \
+	include/xgameevent.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -17,5 +18,6 @@ SOURCES = \
 	xerror.c \
 	xgame.c \
 	xgameactivation.c \
+	xgameevent.c \
 	xthreading.c \
 	xuser.c
