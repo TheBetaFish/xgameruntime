@@ -29,6 +29,7 @@ extern IXAppCaptureMetadataImpl *x_app_capture_metadata_impl;
 extern IXDisplayImpl *x_display_impl;
 extern IXErrorImpl *x_error_impl;
 extern IXGameImpl *x_game_impl;
+extern IXGameActivationImpl *x_game_activation_impl;
 extern IXLauncherImpl *x_launcher_impl;
 extern IXThreadingImpl *x_threading_impl;
 extern IXUserImpl *x_user_impl;
