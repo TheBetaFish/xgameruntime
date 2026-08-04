@@ -17,6 +17,7 @@ SOURCES = \
 	include/xgamestreaming.idl \
 	include/xgameui.idl \
 	include/xpackage.idl \
+	include/xpersistentlocalstorage.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -33,5 +34,6 @@ SOURCES = \
 	xgamestreaming.c \
 	xgameui.c \
 	xpackage.c \
+	xpersistentlocalstorage.c \
 	xthreading.c \
 	xuser.c
