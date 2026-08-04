@@ -35,6 +35,7 @@ extern IXGameInviteImpl *x_game_invite_impl;
 extern IXGameProtocolImpl *x_game_protocol_impl;
 extern IXGameRuntimeFeatureImpl *x_game_runtime_feature_impl;
 extern IXGameSaveImpl *x_game_save_impl;
+extern IXGameStreamingImpl *x_game_streaming_impl;
 extern IXLauncherImpl *x_launcher_impl;
 extern IXThreadingImpl *x_threading_impl;
 extern IXUserImpl *x_user_impl;

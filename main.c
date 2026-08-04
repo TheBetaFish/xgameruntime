@@ -74,6 +74,8 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXGameRuntimeFeatureImpl_QueryInterface( x_game_runtime_feature_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XGameSaveImpl ))
         return IXGameSaveImpl_QueryInterface( x_game_save_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XGameStreamingImpl ))
+        return IXGameStreamingImpl_QueryInterface( x_game_streaming_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XLauncherImpl ))
         return IXLauncherImpl_QueryInterface( x_launcher_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))

@@ -35,6 +35,7 @@
 #include <include/xgameruntimefeature.h>
 #include <include/xgameruntimetypes.h>
 #include <include/xgamesave.h>
+#include <include/xgamestreaming.h>
 #include <include/xspeechsynthesizer.h>
 #include <include/xtaskqueue.h>
 #include <include/xuser.h>
