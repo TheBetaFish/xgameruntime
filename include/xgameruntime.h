@@ -37,6 +37,7 @@
 #include <include/xgamesave.h>
 #include <include/xgamestreaming.h>
 #include <include/xgameui.h>
+#include <include/xpackage.h>
 #include <include/xspeechsynthesizer.h>
 #include <include/xtaskqueue.h>
 #include <include/xuser.h>
