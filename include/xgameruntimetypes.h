@@ -1,7 +1,5 @@
 /*
- * Xbox Game runtime Library
- *
- * Copyright 2026 Olivia Ryan
+ * Copyright (C) the Wine project
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,12 +16,48 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-#define COBJMACROS
+#ifndef __WINE_XGAMERUNTIMETYPES_H
+#define __WINE_XGAMERUNTIMETYPES_H
 
-#include <wine/debug.h>
-#include <xgameruntime.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-extern IXAccessibilityImpl *x_accessibility_impl;
-extern IXThreadingImpl *x_threading_impl;
+typedef struct XColor XColor;
+typedef struct XVersion XVersion;
 
-HRESULT WINAPI QueryApiImpl( const GUID *classId, REFIID interfaceId, void **out );
+struct XColor
+{
+    union
+    {
+        struct
+        {
+            UINT8 A;
+            UINT8 R;
+            UINT8 G;
+            UINT8 B;
+        };
+        UINT32 Value;
+    };
+};
+
+struct XVersion
+{
+    union
+    {
+        struct
+        {
+            UINT16 major;
+            UINT16 minor;
+            UINT16 build;
+            UINT16 revision;
+        };
+        UINT64 Value;
+    };
+};
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

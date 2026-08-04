@@ -50,6 +50,8 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
 {
     TRACE( "clsid %s, iid %s, out %p.\n", debugstr_guid( clsid ), debugstr_guid( iid ), out );
 
+    if (IsEqualGUID( clsid, &CLSID_XAccessibilityImpl ))
+        return IXAccessibilityImpl_QueryInterface( x_accessibility_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
         return IXThreadingImpl_QueryInterface( x_threading_impl, iid, out );
 
