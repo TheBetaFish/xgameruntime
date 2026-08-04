@@ -6,10 +6,12 @@ SOURCES = \
 	include/xappcapture.idl \
 	include/xasyncprovider.idl \
 	include/xdisplay.idl \
+	include/xerror.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
 	xappcapture.c \
 	xdisplay.c \
+	xerror.c \
 	xthreading.c \
 	xuser.c
