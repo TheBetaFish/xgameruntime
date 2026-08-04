@@ -56,6 +56,10 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXAppCaptureImpl_QueryInterface( x_app_capture_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XAppCaptureMetadataImpl ))
         return IXAppCaptureMetadataImpl_QueryInterface( x_app_capture_metadata_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XDisplayImpl ))
+        return IXDisplayImpl_QueryInterface( x_display_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XLauncherImpl ))
+        return IXLauncherImpl_QueryInterface( x_launcher_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
         return IXThreadingImpl_QueryInterface( x_threading_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XUserImpl ))
