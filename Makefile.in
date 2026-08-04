@@ -10,6 +10,7 @@ SOURCES = \
 	include/xgame.idl \
 	include/xgameactivation.idl \
 	include/xgameevent.idl \
+	include/xgameinvite.idl \
 	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
@@ -19,5 +20,6 @@ SOURCES = \
 	xgame.c \
 	xgameactivation.c \
 	xgameevent.c \
+	xgameinvite.c \
 	xthreading.c \
 	xuser.c

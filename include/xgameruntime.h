@@ -30,6 +30,7 @@
 #include <include/xgameactivation.h>
 #include <include/xgameerr.h>
 #include <include/xgameevent.h>
+#include <include/xgameinvite.h>
 #include <include/xgameruntimetypes.h>
 #include <include/xspeechsynthesizer.h>
 #include <include/xtaskqueue.h>
