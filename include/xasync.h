@@ -1,7 +1,5 @@
 /*
- * Xbox Game runtime Library
- *
- * Copyright 2026 Olivia Ryan
+ * Copyright (C) the Wine project
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,11 +16,30 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-#define COBJMACROS
+#ifndef __WINE_XASYNC_H
+#define __WINE_XASYNC_H
 
-#include <wine/debug.h>
-#include <xgameruntime.h>
+#include <xtaskqueue.h>
 
-extern IXThreadingImpl *x_threading_impl;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-HRESULT WINAPI QueryApiImpl( const GUID *classId, REFIID interfaceId, void **out );
+typedef struct XAsyncBlock XAsyncBlock;
+
+typedef void    __stdcall XAsyncCompletionRoutine( XAsyncBlock *asyncBlock );
+typedef HRESULT __stdcall XAsyncWork( XAsyncBlock *asyncBlock );
+
+struct XAsyncBlock
+{
+    XTaskQueueHandle queue;
+    void *context;
+    XAsyncCompletionRoutine *callback;
+    void *internal[4];
+};
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

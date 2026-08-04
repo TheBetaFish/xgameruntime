@@ -1,7 +1,5 @@
 /*
- * Xbox Game runtime Library
- *
- * Copyright 2026 Olivia Ryan
+ * Copyright (C) the Wine project
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,11 +16,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-#define COBJMACROS
+/* April 2026 Release of GDK */
+#define GDKC_VERSION 10002L
+#define GAMING_SERVICES_VERSION 7822L
 
-#include <wine/debug.h>
-#include <xgameruntime.h>
-
-extern IXThreadingImpl *x_threading_impl;
-
-HRESULT WINAPI QueryApiImpl( const GUID *classId, REFIID interfaceId, void **out );
+#include <include/xasync.h>
+#include <include/xasyncprovider.h>
+#include <include/xtaskqueue.h>

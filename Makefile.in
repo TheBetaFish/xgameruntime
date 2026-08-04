@@ -1,4 +1,7 @@
-MODULE = xgameruntime.dll
+MODULE    = xgameruntime.dll
+EXTRAINCL = -I$(srcdir)/include
 
 SOURCES = \
-	main.c
+	include/xasyncprovider.idl \
+	main.c \
+	xthreading.c

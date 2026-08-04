@@ -49,5 +49,9 @@ HRESULT WINAPI InitializeApiImpl( ULONG gdkVer, ULONG gsVer )
 HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
 {
     TRACE( "clsid %s, iid %s, out %p.\n", debugstr_guid( clsid ), debugstr_guid( iid ), out );
+
+    if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
+        return IXThreadingImpl_QueryInterface( x_threading_impl, iid, out );
+
     return HRESULT_FROM_WIN32( ERROR_NOT_SUPPORTED );
 }
