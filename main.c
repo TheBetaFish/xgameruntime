@@ -86,6 +86,8 @@ HRESULT WINAPI QueryApiImpl( REFCLSID clsid, REFIID iid, void **out )
         return IXPersistentLocalStorageImpl_QueryInterface( x_persistent_local_storage_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XStoreImpl ))
         return IXStoreImpl_QueryInterface( x_store_impl, iid, out );
+    if (IsEqualGUID( clsid, &CLSID_XSystemImpl ))
+        return IXSystemImpl_QueryInterface( x_system_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XThreadingImpl ))
         return IXThreadingImpl_QueryInterface( x_threading_impl, iid, out );
     if (IsEqualGUID( clsid, &CLSID_XUserImpl ))
