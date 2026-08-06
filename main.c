@@ -23,6 +23,26 @@
 
 WINE_DEFAULT_DEBUG_CHANNEL(xgameruntime);
 
+DWORD tlsIndex;
+
+BOOL WINAPI DllMain( HINSTANCE hinst, DWORD reason, void *reserved )
+{
+    TRACE( "hinst %p, reason %lu, reserved %p.\n", hinst, reason, reserved );
+
+    switch (reason)
+    {
+        case DLL_PROCESS_ATTACH:
+            if ((tlsIndex = TlsAlloc()) == TLS_OUT_OF_INDEXES) return FALSE;
+        case DLL_THREAD_ATTACH:
+            TlsSetValue( tlsIndex, FALSE );
+            break;
+        case DLL_PROCESS_DETACH:
+            TlsFree( tlsIndex );
+            break;
+    }
+    return TRUE;
+}
+
 struct initialize_options
 {
     UINT32 unk;

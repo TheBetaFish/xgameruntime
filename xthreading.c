@@ -208,19 +208,21 @@ static void WINAPI x_threading_XTaskQueueSetCurrentProcessTaskQueue( IXThreading
 
 static HRESULT WINAPI x_threading_XThreadSetTimeSensitive( IXThreadingImpl *iface, BOOLEAN isTimeSensitiveThread )
 {
-    FIXME( "iface %p, isTimeSensitiveThread %d stub!\n", iface, isTimeSensitiveThread );
-    return E_NOTIMPL;
+    TRACE( "iface %p, isTimeSensitiveThread %d.\n", iface, isTimeSensitiveThread );
+    if (!TlsSetValue( tlsIndex, (void *)(UINT_PTR)isTimeSensitiveThread )) return HRESULT_FROM_WIN32( GetLastError() );
+    return S_OK;
 }
 
 static void WINAPI x_threading_XThreadAssertNotTimeSensitive( IXThreadingImpl *iface )
 {
-    FIXME( "iface %p stub!\n", iface );
+    TRACE( "iface %p.\n", iface );
+    if (TlsGetValue( tlsIndex )) DebugBreak();
 }
 
 static BOOLEAN WINAPI x_threading_XThreadIsTimeSensitive( IXThreadingImpl *iface )
 {
-    FIXME( "iface %p stub!\n", iface );
-    return FALSE;
+    TRACE( "iface %p.\n", iface );
+    return TlsGetValue( tlsIndex ) ? 1 : 0;
 }
 
 static const struct IXThreadingImplVtbl x_threading_vtbl =
