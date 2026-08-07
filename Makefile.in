@@ -1,47 +1,46 @@
 MODULE    = xgameruntime.dll
-EXTRAINCL = -I$(srcdir)/include
 IMPORTS   = combase
 
 SOURCES = \
-	include/xaccessibility.idl \
-	include/xappcapture.idl \
-	include/xasyncprovider.idl \
-	include/xdisplay.idl \
-	include/xerror.idl \
-	include/xgame.idl \
-	include/xgameactivation.idl \
-	include/xgameevent.idl \
-	include/xgameinvite.idl \
-	include/xgameprotocol.idl \
-	include/xgameruntimefeature.idl \
-	include/xgamesave.idl \
-	include/xgamestreaming.idl \
-	include/xgameui.idl \
-	include/xnetworking.idl \
-	include/xpackage.idl \
-	include/xpersistentlocalstorage.idl \
-	include/xstore.idl \
-	include/xsystem.idl \
-	include/xuser.idl \
 	main.c \
 	xaccessibility.c \
+	xaccessibility.idl \
 	xappcapture.c \
+	xappcapture.idl \
+	xasyncprovider.idl \
 	xdisplay.c \
+	xdisplay.idl \
 	xerror.c \
+	xerror.idl \
 	xgame.c \
+	xgame.idl \
 	xgameactivation.c \
+	xgameactivation.idl \
 	xgameevent.c \
+	xgameevent.idl \
 	xgameinvite.c \
+	xgameinvite.idl \
 	xgameprotocol.c \
+	xgameprotocol.idl \
 	xgameruntimefeature.c \
+	xgameruntimefeature.idl \
 	xgamesave.c \
+	xgamesave.idl \
 	xgamestreaming.c \
+	xgamestreaming.idl \
 	xgameui.c \
+	xgameui.idl \
 	xnetworking.c \
+	xnetworking.idl \
 	xpackage.c \
+	xpackage.idl \
 	xpersistentlocalstorage.c \
+	xpersistentlocalstorage.idl \
 	xstore.c \
+	xstore.idl \
 	xsystem.c \
+	xsystem.idl \
 	xsystemanalytics.c \
 	xthreading.c \
-	xuser.c
+	xuser.c \
+	xuser.idl
