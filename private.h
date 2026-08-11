@@ -50,9 +50,9 @@
 #include <xtaskqueue.h>
 #include <xuser.h>
 
-/* April 2026 Release of GDK */
+/* April 2026 Update 3 Release of GDK */
 #define GDKC_VERSION 10002L
-#define GAMING_SERVICES_VERSION 7822L
+#define GAMING_SERVICES_VERSION 7874L
 
 #define WIDL_using_Windows_Foundation
 #define WIDL_using_Windows_Foundation_Collections
